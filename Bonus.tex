@@ -34,14 +34,61 @@ Given the following two equations, which describe the conservation of momentum a
 \end{align}
 
 \subsection{Solution}
-Solve first for one of the variables (say, $v_{1f}$) and then for the other variable using an identical procedure ($v_{2f}$, if $v_{1f}$ is solved for first).\par
-Treat equations 1 and 2 as a two-variable system of equations, where the two variables are $v_{1f}$ and $v_{2f}$. Solve the "system" by substitution i.e. solve one equation (say, equation 1) for $v_{2f}$ and plug the result into equation 2. This will create a third equation (equation 3) without $v_{2f}$. Finally, solve equation 3 algebraically for $v_{1f}$ to give the first of the two formulas (equation 4). This procedure can be carried out as follows.
-
+Solve first for one of the variables (say, $v_{1f}$). Then, since the decision to designate one object, object 1, and the other, object 2, is arbitrary, flip the numbers in the solution for $v_{1f}$ to find the solution for $v_{2f}$.\par
+To solve for $v_{1f}$, first, manipulate equations 1 and 2 to determine a simpler relation (equation 3) between the velocities. This will quicken the substitution and simplification described later.
+\vspace{0em}
 \begin{align*}
     m_1v_{1i}+m_2v_{2i} &= m_1v_{1f}+m_2v_{2f}\\
-    m_1v_{1i}+m_2v_{2i}-m_1v_{1f} &= m_2v_{2f}\\
-    v_{2f} &= \frac{m_1v_{1i}+m_2v_{2i}-m_1v_{1f}}{m_2}
+    m_1v_{1i}-m_1v_{1f} &= m_2v_{2f}-m_2v_{2i}\\
+    m_1(v_{1i}-v_{1f}) &= m_2(v_{2f}-v_{2i})
+\end{align*}
+\begin{align*}
+    \frac{1}{2}m_1{v_{1i}}^2+\frac{1}{2}m_2{v_{2i}}^2 &= \frac{1}{2}m_1{v_{1f}}^2+\frac{1}{2}m_2{v_{2f}}^2\\
+    m_1{v_{1i}}^2+m_2{v_{2i}}^2 &= m_1{v_{1f}}^2+m_2{v_{2f}}^2\\
+    m_1{v_{1i}}^2-m_1{v_{1f}}^2 &= m_2{v_{2f}}^2-m_2{v_{2i}}^2\\
+    m_1({v_{1i}}^2-{v_{1f}}^2) &= m_2({v_{2f}}^2-{v_{2i}}^2)\\
+    m_1(v_{1i}-v_{1f})(v_{1i}+v_{1f}) &= m_2(v_{2f}-v_{2i})(v_{2f}+v_{2i})
+\end{align*}
+\vspace{0em}
+\begin{equation*}
+    \frac{m_1(v_{1i}-v_{1f})(v_{1i}+v_{1f}) = m_2(v_{2f}-v_{2i})(v_{2f}+v_{2i})}{m_1(v_{1i}-v_{1f}) = m_2(v_{2f}-v_{2i})}\\
+\end{equation*}
+\vspace{-1.8em}
+\begin{align*}
+    v_{1i}+v_{1f} &= v_{2f}+v_{2i}\\
+    v_{1i}-v_{2i} &= v_{2f}-v_{1f}\tag{3}
 \end{align*}
 
+Treat equations 1 and 3 as a two-variable system of equations, where the two variables are $v_{1f}$ and $v_{2f}$. Solve the "system" by substitution i.e. solve one equation (say, equation 3) for $v_{2f}$ and plug the result into equation 1. This will create an equation without $v_{2f}$.
+\vspace{0em}
+\begin{align*}
+    v_{1i}-v_{2i} &= v_{2f}-v_{1f}\\
+    v_{2f} &= v_{1i}-v_{2i}+v_{1f}
+\end{align*}
+\vspace{-0.5em}
+\begin{equation*}
+    m_1v_{1i}+m_2v_{2i} = m_1v_{1f}+m_2(v_{1i}-v_{2i}+v_{1f})
+\end{equation*}
+
+\newpage
+Finally, solve this equation algebraically for $v_{1f}$ to give the first of the two formulas (equation 4).
+\vspace{0em}
+\begin{align*}
+    m_1v_{1i}+m_2v_{2i} &= m_1v_{1f}+m_2v_{1i}-m_2v_{2i}+m_2v_{1f}\\
+    m_1v_{1i}+2m_2v_{2i}-m_2v_{1i} &= (m_1+m_2)v_{1f}\\
+    v_{1f} &= \frac{m_1v_{1i}+2m_2v_{2i}-m_2v_{1i}}{m_1+m_2}\tag{4}
+\end{align*}
+
+Flip the subscripts in equation 4 to give the solution to $v_{2f}$ (equation 5).
+
+\begin{equation*}
+    v_{2f} = \frac{m_2v_{2i}+2m_1v_{1i}-m_1v_{2i}}{m_1+m_2}\tag{5}
+\end{equation*}
+
+To restate, the final solutions for $v_{1f}$ and $v_{2f}$ (equations 4 and 5) are listed below.
+
+\begin{equation*}
+    \fbox{$v_{1f}$ = $\dfrac{m_1v_{1i}+2m_2v_{2i}-m_2v_{1i}}{m_1+m_2}$} \hspace{0.76in} \fbox{$v_{2f}$ = $\dfrac{m_2v_{2i}+2m_1v_{1i}-m_1v_{2i}}{m_1+m_2}$}
+\end{equation*}
 
 \end{document}
