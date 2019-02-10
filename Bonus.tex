@@ -1,0 +1,92 @@
+\documentclass{article}
+
+\usepackage[letterpaper, margin=1in, footskip=0.25in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{csquotes}
+
+\MakeOuterQuote{"}
+\setcounter{secnumdepth}{0}
+
+\begin{document}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{Labalme \thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\noindent Steven Labalme\par
+\noindent Mr. Bilak\par
+\noindent AP Physics C: Mechanics, 1\par
+\noindent 11 February 2019\par
+
+\begin{center}
+\section{Momentum Bonus}
+\end{center}
+
+\subsection{Task}
+Given the following two equations, which describe the conservation of momentum and kinetic energy, respectively, before and after an elastic collison, derive formulas for the final velocity of each object ($v_{1f}$ and $v_{2f}$) in terms of only these object's initial velocities and masses (not each other's final velocities).
+\begin{align}
+    m_1v_{1i}+m_2v_{2i} &= m_1v_{1f}+m_2v_{2f}\\
+    \frac{1}{2}m_1{v_{1i}}^2+\frac{1}{2}m_2{v_{2i}}^2 &= \frac{1}{2}m_1{v_{1f}}^2+\frac{1}{2}m_2{v_{2f}}^2
+\end{align}
+
+\subsection{Solution}
+Solve first for one of the variables (say, $v_{1f}$) and then for the other variable using an identical procedure ($v_{2f}$, if $v_{1f}$ is solved for first).\par
+Treat equations 1 and 2 as a two-variable system of equations, where the two variables are $v_{1f}$ and $v_{2f}$. Solve the "system" by substitution i.e. solve one equation (say, equation 1) for $v_{2f}$ and plug the result into equation 2. This will create a third equation (equation 3) without $v_{2f}$. Finally, solve equation 3 algebraically for $v_{1f}$ to give the first of the two formulas (equation 4). This procedure can be carried out as follows.
+
+\begin{align*}
+    m_1v_{1i}+m_2v_{2i} &= m_1v_{1f}+m_2v_{2f}\\
+    m_1v_{1i}+m_2v_{2i}-m_1v_{1f} &= m_2v_{2f}\\
+    v_{2f} &= \frac{m_1v_{1i}+m_2v_{2i}-m_1v_{1f}}{m_2}
+\end{align*}
+\begin{equation*}
+    \frac{1}{2}m_1{v_{1i}}^2+\frac{1}{2}m_2{v_{2i}}^2 = \frac{1}{2}m_1{v_{1f}}^2+\frac{1}{2}m_2{v_{2f}}^2
+\end{equation*}
+\begin{equation*}
+    \frac{1}{2}m_1{v_{1i}}^2+\frac{1}{2}m_2{v_{2i}}^2 = \frac{1}{2}m_1{v_{1f}}^2+\frac{1}{2}m_2\left(\frac{m_1v_{1i}+m_2v_{2i}-m_1v_{1f}}{m_2}\right)^2\tag{3}
+\end{equation*}
+\begin{equation*}
+    m_1{v_{1i}}^2+m_2{v_{2i}}^2 = m_1{v_{1f}}^2+m_2\frac{(m_1v_{1i}+m_2v_{2i}-m_1v_{1f})^2}{(m_2)^2}
+\end{equation*}
+\begin{equation*}
+    m_1{v_{1i}}^2+m_2{v_{2i}}^2 = m_1{v_{1f}}^2+\frac{{m_1}^2{v_{1i}}^2+{m_2}^2{v_{2i}}^2+{m_1}^2{v_{1f}}^2+2m_1m_2v_{1i}v_{2i}-2{m_1}^2v_{1i}v_{1f}-2m_1m_2v_{2i}v_{1f}}{m_2}
+\end{equation*}
+\begin{equation*}
+    m_1{v_{1i}}^2+\frac{{m_2}^2{v_{2i}}^2}{m_2}-\frac{{m_1}^2{v_{1i}}^2+{m_2}^2{v_{2i}}^2+2m_1m_2v_{1i}v_{2i}}{m_2} = m_1{v_{1f}}^2+\frac{{m_1}^2{v_{1f}}^2-2{m_1}^2v_{1i}v_{1f}-2m_1m_2v_{2i}v_{1f}}{m_2}
+\end{equation*}
+\begin{equation*}
+    m_1{v_{1i}}^2-\frac{{m_1}^2{v_{1i}}^2+2m_1m_2v_{1i}v_{2i}}{m_2} = m_1{v_{1f}}^2+\frac{{m_1}^2{v_{1f}}^2-2{m_1}^2v_{1i}v_{1f}-2m_1m_2v_{2i}v_{1f}}{m_2}
+\end{equation*}
+\begin{equation*}
+    m_1m_2{v_{1i}}^2-{m_1}^2{v_{1i}}^2-2m_1m_2v_{1i}v_{2i} = m_1m_2{v_{1f}}^2+{m_1}^2{v_{1f}}^2-2{m_1}^2v_{1i}v_{1f}-2m_1m_2v_{2i}v_{1f}
+\end{equation*}
+\begin{equation*}
+    0 = (m_1m_2+{m_1}^2){v_{1f}}^2+(-2{m_1}^2v_{1i}-2m_1m_2v_{2i})v_{1f}+(-m_1m_2{v_{1i}}^2+{m_1}^2{v_{1i}}^2+2m_1m_2v_{1i}v_{2i})
+\end{equation*}
+\begin{equation*}
+    v_{1f} = \frac{-(-2{m_1}^2v_{1i}-2m_1m_2v_{2i})\pm\sqrt{(-2{m_1}^2v_{1i}-2m_1m_2v_{2i})^2-4(m_1m_2+{m_1}^2)(-m_1m_2{v_{1i}}^2+{m_1}^2{v_{1i}}^2+2m_1m_2v_{1i}v_{2i})}}{2(m_1m_2+{m_1}^2)}
+\end{equation*}
+\begin{equation*}
+    v_{1f} = \frac{(2{m_1}^2v_{1i}+2m_1m_2v_{2i})\pm (2m_1m_2v_{1i}-2m_1m_2v_{2i})}{2(m_1m_2+{m_1}^2)}
+\end{equation*}
+\begin{align*}
+    v_{1f} &= \frac{2{m_1}^2v_{1i}+2m_1m_2v_{1i}}{2(m_1m_2+{m_1}^2)}&
+    v_{1f} &= \frac{2{m_1}^2v_{1i}+4m_1m_2v_{2i}-2m_1m_2v_{1i}}{2(m_1m_2+{m_1}^2)}
+\end{align*}
+\begin{align*}
+    v_{1f} &= \frac{2({m_1}^2+m_1m_2)v_{1i}}{2(m_1m_2+{m_1}^2)}&
+    v_{1f} &= \frac{{m_1}^2v_{1i}+2m_1m_2v_{2i}-m_1m_2v_{1i}}{m_1m_2+{m_1}^2}
+\end{align*}
+\begin{align*}
+    v_{1f} &= v_{1i}&
+    v_{1f} &= \frac{m_1(m_1v_{1i}+2m_2v_{2i}-m_2v_{1i})}{m_1(m_2+m_1)}
+\end{align*}
+\begin{equation*}
+    v_{1f} = \frac{m_1v_{1i}+2m_2v_{2i}-m_2v_{1i}}{m_2+m_1}\tag{4}
+\end{equation*}
+
+
+\end{document}
